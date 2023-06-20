@@ -35,3 +35,64 @@ class Order:
 # FAILED Customer in customer.py customer has unique list of all the coffees they have ordered. - assert 0 == 2
 
 
+# NOTES:
+
+# this code represents an order placed by a customer for a specific coffee. 
+# When an order is created, it is associated with the customer, coffee, and price. 
+# The order is added to the all list to keep track of all orders. 
+# Additionally, the order is added to the respective lists of orders for the coffee and customer. 
+# Similarly, the coffee is added to the list of coffees for the customer. 
+# This way, the relationships between orders, customers, and coffees are established and tracked.
+
+# the class Order
+# all =[] 
+# This line creates a class-level variable called all, which is an empty list. 
+# This variable is shared among all instances of the Order class..
+
+# the def __init__
+# def __init__(self, customer, coffee, price):
+    #     self.customer = customer
+    #     self.coffee = coffee
+    #     self.price = price
+    #     Order.all.append(self)
+    #     coffee.orders(self)
+    #     coffee.customers(customer)
+    #     customer.orders(self)
+    #     customer.coffees(coffee)
+
+# this is the initializer or constructor of the Order class. 
+# It takes three parameters: customer, coffee, and price. 
+# It assigns these values to instance variables of the same names (self.customer, self.coffee, self.price).
+
+# Next, it appends the current instance (self) to the class-level list all using Order.all.append(self). 
+# This allows keeping track of all orders placed.
+
+# Then, it calls the orders method of the coffee object, passing self as the new order. 
+# This adds the current order to the list of orders for that particular coffee.
+
+# Similarly, it calls the customers method of the coffee object, passing customer as the new customer. 
+# This adds the customer to the list of customers for that particular coffee.
+
+# Next, it calls the orders method of the customer object, passing self as the new order. 
+# This adds the current order to the list of orders for that customer.
+
+# Finally, it calls the coffees method of the customer object, passing coffee as the new coffee. 
+# This adds the coffee to the list of coffees for that customer.
+
+
+# CODE w/out Notes: 
+
+# class Order:
+
+
+#     all = []
+
+#     def __init__(self, customer, coffee, price):
+#         self.customer = customer
+#         self.coffee = coffee
+#         self.price = price
+#         Order.all.append(self)
+#         coffee.orders(self)
+#         coffee.customers(customer)
+#         customer.orders(self)
+#         customer.coffees(coffee)
